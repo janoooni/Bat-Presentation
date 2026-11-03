@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bats of New York</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress"><span id="progressBar"></span></div>
+
+<main class="track" id="track">
+
+  <!-- Figma slide 13: intro -->
+  <section class="slide" data-id="intro">
+    <div class="stage">
+      <img class="skyline" src="assets/skyline.jpg" alt="Lower Manhattan skyline at dusk">
+      <p class="caption rv">Right now, above the traffic, something is flying through New York that you cannot hear.</p>
+      <div class="fly-path"><img class="flap" src="assets/flying-bat.png" alt=""></div>
+      <div class="scroll-hint rv" style="--d:2.4s">Scroll sideways <span>→</span></div>
+    </div>
+  </section>
+
+  <!-- Figma slide 1: species -->
+  <section class="slide" data-id="species">
+    <div class="stage">
+      <p class="caption rv">New York has nine bat species. Every one eats insects, and six of them spend winter hibernating in caves and mines.</p>
+      <img class="tree" src="assets/tree.png" alt="" style="left:796px;top:247px;width:596px">
+      <figure class="bat" style="left:166px;top:181px;--fx:-500px;--fy:-200px;--d:.2s"><img src="assets/little-brown.png" style="width:313px" alt=""><figcaption style="left:40px;top:203px">Little Brown Bat</figcaption></figure>
+      <figure class="bat" style="left:195px;top:429px;--fx:-500px;--fy:0px;--d:.35s"><img src="assets/big-brown.png" style="width:255px" alt=""><figcaption style="left:10px;top:158px">Big Brown Bat</figcaption></figure>
+      <figure class="bat" style="left:205px;top:614px;--fx:-500px;--fy:100px;--d:.5s"><img src="assets/long-eared.png" style="width:261px" alt=""><figcaption style="left:0;top:162px">Northern Long-Eared Bat</figcaption></figure>
+      <figure class="bat" style="left:205px;top:798px;--fx:-500px;--fy:300px;--d:.65s"><img src="assets/tricolored.png" style="width:270px" alt=""><figcaption style="left:0;top:142px">Tricolored Bat</figcaption></figure>
+      <figure class="bat" style="left:525px;top:277px;--fx:-200px;--fy:-400px;--d:.45s"><img src="assets/indiana.png" style="width:154px" alt=""><figcaption style="left:18px;top:236px">Indiana Bat</figcaption></figure>
+      <figure class="bat" style="left:475px;top:672px;--fx:-300px;--fy:400px;--d:.6s"><img src="assets/small-footed.png" style="width:254px" alt=""><figcaption style="left:68px;top:155px">Eastern Small-Footed Bat</figcaption></figure>
+      <figure class="bat" style="left:1392px;top:278px;--fx:500px;--fy:-300px;--d:.9s"><img src="assets/silver-haired.png" style="width:268px" alt=""><figcaption style="left:31px;top:154px">Silver-Haired Bat</figcaption></figure>
+      <figure class="bat" style="left:1424px;top:497px;--fx:500px;--fy:0px;--d:1.05s"><img src="assets/eastern-red.png" style="width:214px" alt=""><figcaption style="left:0;top:124px">Eastern Red Bat</figcaption></figure>
+      <figure class="bat" style="left:1400px;top:665px;--fx:500px;--fy:300px;--d:1.2s"><img src="assets/hoary.png" style="width:283px" alt=""><figcaption style="left:23px;top:153px">Hoary Bat</figcaption></figure>
+      <p class="source rv" style="--d:1.4s">Bats of NY, Department of Environmental Conservation</p>
+    </div>
+  </section>
+
+  <!-- Figma slide 2: hearing range -->
+  <section class="slide" data-id="hearing">
+    <div class="stage">
+      <p class="caption rv">They hunt by sound. Their calls run at roughly 20 to 60 kHz, far above the 20,000 Hz ceiling of human hearing. We share the city with them and hear none of it.</p>
+      <svg class="chart" id="hearingChart" viewBox="0 0 1920 1080"></svg>
+      <p class="source rv" style="--d:1.8s">WCS/Fordham ‘Bats in the Bronx’ study</p>
+    </div>
+  </section>
+
+  <!-- Figma slide 3: map -->
+  <section class="slide" data-id="map">
+    <div class="stage">
+      <p class="caption rv">Gotham Bat Conservancy has recorded little brown, tricolored and northern long-eared bats in city parks, with endangered or threatened species in all five boroughs.</p>
+      <img class="nyc-map" src="assets/nyc-map.png" alt="Map of New York City's five boroughs">
+      <svg class="chart" id="mapChart" viewBox="0 0 1920 1080"></svg>
+      <ul class="legend" id="mapLegend"></ul>
+      <p class="source rv" style="--d:1.6s">Gotham Bat Conservancy 2024; Urban Bat Project NYC; iNaturalist export; NYC 311 DEP noise.</p>
+    </div>
+  </section>
+
+  <!-- Figma slide 4: sightings over time -->
+  <section class="slide" data-id="sightings">
+    <div class="stage">
+      <p class="caption rv">Public sightings tells a simpler story with 306 bat observations on iNaturalist against 17 sonic detections in 11 parks. Bats are present in far more places than people notice.</p>
+      <svg class="chart" id="lineChart" viewBox="0 0 1920 1080"></svg>
+      <p class="source rv" style="--d:2s">iNaturalist export, all bats, New York State</p>
+    </div>
+  </section>
+
+  <!-- Figma slide 5: noise donuts -->
+  <section class="slide" data-id="noise">
+    <div class="stage">
+      <p class="caption rv">That night is loud. New Yorkers filed over 738,000 noise complaints in a single year, more than 2,000 a day, and the city never fully darkens. Researchers now track noise and lighting as factors that shape where bats fly.</p>
+      <svg class="chart" id="donutChart" viewBox="0 0 1920 1080"></svg>
+      <p class="source rv" style="--d:2s">NYC Open Data 311, Noise Complaints</p>
+    </div>
+  </section>
+
+  <!-- Figma slide 6: 96 reports, water fill -->
+  <section class="slide" data-id="water">
+    <div class="stage">
+      <p class="caption rv">When New Yorkers call Urban Park Rangers about an animal, bats make up 1% of the reports.</p>
+      <svg class="chart" id="waterChart" viewBox="0 0 1920 1080"></svg>
+      <p class="source rv" style="--d:1s">NYC Open Data, Urban Park Ranger Animal Condition Response</p>
+    </div>
+  </section>
+
+  <!-- Figma slide 7: sankey -->
+  <section class="slide" data-id="sankey">
+    <div class="stage">
+      <p class="caption rv">Raccoons, Canada Goose, Dog, Cat, Eastern Gray Squirrel fill the list. Bats are a sliver of it, but a sliver can mean few bats, or few people who notice them.</p>
+      <svg class="chart" id="sankeyChart" viewBox="0 0 1920 1080"></svg>
+      <p class="source rv" style="--d:1s">NYC Open Data, Urban Park Ranger Animal Condition Response</p>
+    </div>
+  </section>
+
+  <!-- Figma slide 8: healthy vs injured -->
+  <section class="slide" data-id="health">
+    <div class="stage">
+      <p class="caption rv">Of 96 bat reports, 38 were healthy and 21 injured, the others were unhealthy, DOA or not recorded.</p>
+      <svg class="chart" id="barChart" viewBox="0 0 1920 1080"></svg>
+      <p class="source rv" style="--d:2s">NYC Open Data, Urban Park Ranger Animal Condition Response</p>
+    </div>
+  </section>
+
+  <!-- Figma slide 9: myth vs truth -->
+  <section class="slide" data-id="myths">
+    <div class="stage">
+      <p class="caption rv">Part of the answer is old fear. Here are the stories we tell about bats, and what is documented.</p>
+      <span class="tag rv" style="left:463px;--d:.2s">MYTH</span>
+      <span class="tag rv" style="left:1376px;--d:.2s">TRUTH</span>
+      <svg class="chart" viewBox="0 0 1920 1080"><line class="divider" x1="898" y1="260" x2="898" y2="965" /></svg>
+      <div class="myth-row" style="top:340px;--d:.6s"><p class="myth">“Blind as a bat.”</p><p class="truth">Bats can see. Some can even see ultraviolet light. They use echolocation up close and their eyes for big-picture navigation (UC Davis)</p></div>
+      <div class="myth-row" style="top:470px;--d:1.1s"><p class="myth">“They fly into your hair.”</p><p class="truth">They’re chasing insects near your head. Echolocation can pick out prey as small as gnats (UC Davis).</p></div>
+      <div class="myth-row" style="top:583px;--d:1.6s"><p class="myth">“Vampire.”</p><p class="truth">All nine New York bats eat insects. Blood-feeding bats live in Latin America.</p></div>
+      <div class="myth-row" style="top:686px;--d:2.1s"><p class="myth">“All bats have rabies.”</p><p class="truth">Just over 3% of bats sent for testing in New York in 2014-2023 had rabies (NY Department of Health). That’s higher than the rate in wild bats overall, because sick or bitten bats are the ones that get tested.</p></div>
+      <div class="myth-row" style="top:865px;--d:2.6s"><p class="myth">“Flying mice.”</p><p class="truth">Bats aren’t rodents. Most North American bats have one pup a year (UC Davis).</p></div>
+    </div>
+  </section>
+
+  <!-- Figma slide 10: white-nose syndrome -->
+  <section class="slide" data-id="wns">
+    <div class="stage">
+      <p class="caption rv">In 2006 white-nose syndrome reached New York. Since then the tricolored bat has lost 98 percent of its state population, the little brown bat 91 percent, and the northern long-eared bat is down to about one percent of what it was.</p>
+      <figure class="wns-photo rv" style="--d:.3s"><img src="assets/white-nose.png" alt="Little brown bat with white fungal growth on its muzzle"><figcaption>White-Nose Syndrome</figcaption></figure>
+      <img class="row-bat rv" src="assets/little-brown.png" style="left:55px;top:392px;width:313px;--d:.4s" alt="">
+      <img class="row-bat rv" src="assets/long-eared.png" style="left:85px;top:625px;width:261px;--d:.5s" alt="">
+      <img class="row-bat rv" src="assets/tricolored.png" style="left:77px;top:828px;width:270px;--d:.6s" alt="">
+      <svg class="chart" id="dumbbellChart" viewBox="0 0 1920 1080"></svg>
+      <p class="footnote rv" style="--d:2.6s">Little brown bats have leveled off after the crash, but a rebound will take decades. Females have one or two pups a year.<br>There is still no cure for white-nose syndrome, and the tricolored bat has been proposed for the federal endangered list.</p>
+      <p class="source rv" style="--d:2.6s">NYSDEC</p>
+    </div>
+  </section>
+
+  <!-- Figma slide 12: closing -->
+  <section class="slide" data-id="outro">
+    <div class="stage">
+      <p class="caption closing rv">Little brown bats have leveled off after the crash, but a rebound will take decades. Females have one or two pups a year. There is still no cure for white-nose syndrome, and the tricolored bat has been proposed for the federal endangered list.</p>
+      <p class="finale" id="finale">The bats are still here. The question is whether we notice.</p>
+      <div class="fly-path late"><img class="flap" src="assets/flying-bat.png" alt=""></div>
+    </div>
+  </section>
+
+</main>
+
+<nav class="nav" aria-label="Slides">
+  <button class="arrow" id="prev" aria-label="Previous slide">←</button>
+  <div class="dots" id="dots"></div>
+  <button class="arrow" id="next" aria-label="Next slide">→</button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
